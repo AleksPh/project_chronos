@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRONOS - Вхід</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="full-page">
+    <div class="page-container">
+        
+        <!-- LEFT SIDE -->
+        <div class="left-side">
+            <div class="overlay"></div>
+            <div class="title-block">
+                <h1><img src="subtitle.png" alt=""></h1>
+                <p><img src="title.png" alt=""></p>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-side">
+            <h2>Вхід</h2>
+            <p class="subtitle">Продовжте свою подорож історією</p>
+
+            <label class="label">Електронна пошта</label>
+            <input id="login-email" class="input" type="email" placeholder="Введіть вашу електронну адресу">
+
+            <label class="label">Пароль</label>
+            <input id="login-password" class="input" type="password" placeholder="Введіть пароль">
+
+            <button class="btn-yellow" onclick="login()">Увійти →</button>
+
+            <p class="switch">Немає акаунту? 
+                <a href="reg.html">Зареєструйтеся</a>
+            </p>
+        </div>
+    </div>
+
+    
+    <!-- <section class="history-section">
+        <h2>Дослідіть історичні події</h2>
+    
+        <div class="history-cards">
+            <div class="h-card active">
+                <div class="h-year">1648</div>
+                <div class="h-line"></div>
+                <div class="h-name">Козацька доба</div>
+                <div class="h-desc">Богдан Хмельницький веде повстання</div>
+            </div>
+    
+            <div class="h-card">
+                <div class="h-year">1709</div>
+                <div class="h-line"></div>
+                <div class="h-name">Полтавська битва</div>
+                <div class="h-desc">Вирішальна битва Північної війни</div>
+            </div>
+    
+            <div class="h-card">
+                <div class="h-year">1914</div>
+                <div class="h-line"></div>
+                <div class="h-name">Перша світова війна</div>
+                <div class="h-desc">Початок глобального конфлікту</div>
+            </div>
+        </div>
+    
+       
+        <div class="timeline-box">
+            <div class="t-line"></div>
+            <div class="t-point" style="left:5%;"></div>
+            <div class="t-label" style="left:5%;">4000 до н.е.</div>
+            <div class="t-point" style="left:20%;"></div>
+            <div class="t-label" style="left:20%;">V ст. до н.е.</div>
+            <div class="t-point" style="left:35%;"></div>
+            <div class="t-label" style="left:35%;">882</div>
+            <div class="t-point" style="left:50%;"></div>
+            <div class="t-label" style="left:50%;">1253</div>
+            <div class="t-point" style="left:65%; background:#F5C94A;"></div>
+            <div class="t-label active" style="left:65%;">1648</div>
+            <div class="t-point" style="left:80%;"></div>
+            <div class="t-label" style="left:80%;">1917</div>
+            <div class="t-point" style="left:95%;"></div>
+            <div class="t-label" style="left:95%;">1991</div>
+        </div>
+    </section> -->
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

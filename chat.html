@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRONOS - Чат</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="chat-body">
+
+<!-- MAIN PAGE -->
+<div id="main-page" class="page active-page">
+    <header>
+        <h1 class="logo"><img src="Chronos.png" alt="#"></h1>
+        <div class="user-badge" id="user-badge"></div>
+    </header>
+
+    <h2 class="page-title">Виберіть історичну епоху</h2>
+    <input class="search" placeholder="Введіть назву епохи...">
+
+    <div class="grid">
+        <div class="card era-card" onclick="openTopics()">Епоха Козацтва</div>
+        <div class="card era-card" onclick="openTopics()">Київська Русь</div>
+        <div class="card era-card" onclick="openTopics()">Українська революція</div>
+        <div class="card era-card" onclick="openTopics()">Галицько-Волинське князівство</div>
+        <div class="card era-card" onclick="openTopics()">Трипільська культура</div>
+        <div class="card era-card" onclick="openTopics()">Козацькі війни</div>
+        <div class="card era-card" onclick="openTopics()">Гетьманщина</div>
+        <div class="card era-card" onclick="openTopics()">Національно-визвольний рух</div>
+        <div class="card era-card" onclick="openTopics()">Незалежна Україна</div>
+    </div>
+</div>
+
+<!-- TOPICS PAGE -->
+<div id="topics-page" class="page">
+    <header>
+        <h1 class="logo"><img src="Chronos.png" alt=""></h1>
+        <div class="user-badge" id="user-badge-topics"></div>
+    </header>
+
+    <h2 class="page-title">Оберіть тему</h2>
+    <p class="page-subtitle">Розпочніть інтерактивну подорож з AI-агентами минулого</p>
+    <input class="search" placeholder="Введіть назву теми...">
+
+    <div class="grid grid-topics">
+        <div class="card topic-card" onclick="openModeModal()">Українська революція 1917</div>
+        <div class="card topic-card" onclick="openModeModal()">Формування УЦР</div>
+        <div class="card topic-card" onclick="openModeModal()">Універсали</div>
+        <div class="card topic-card" onclick="openModeModal()">Боротьба за незалежність</div>
+    </div>
+</div>
+
+<!-- MODE MODAL -->
+<div id="mode-modal" class="modal">
+    <div class="modal-box">
+        <h3>Оберіть режим</h3>
+        <p class="modal-sub">Виберіть, як ви хочете взаємодіяти з історичною постаттю</p>
+
+        <div class="mode-grid">
+            <div class="mode-card" onclick="startLearning()">
+                <div class="mode-icon"><img src="Icon.png" alt=""></div>
+                <h4>Режим навчання</h4>
+                <p>Отримайте освітню інформацію та історичні факти від AI-агента</p>
+            </div>
+            <div class="mode-card" onclick="openSimulation()">
+                <div class="mode-icon"><img src="Icon (1).png" alt=""></div>
+                <h4>Режим симуляції</h4>
+                <p>Напишіть свою власну історію</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- LEARNING PAGE -->
+<div id="learning-page" class="page">
+    <header class="learning-header">
+        <h1 class="logo"><img src="Chronos.png" alt=""></h1>
+        <nav class="tabs">
+            <button class="tab-btn">📖 Кодекс</button>
+            <button class="tab-btn active">📚 Навчання</button>
+            <button class="tab-btn" onclick="openSimulation()">⚡ Симуляція</button>
+        </nav>
+        <div class="user-badge" id="user-badge-learning"></div>
+    </header>
+
+    <div class="learning-container">
+        <h2 class="learning-title">Українська Революція 1917. Початок боротьби</h2>
+        
+        <div class="participants">
+            <h3>Дійові особи:</h3>
+            <div class="participant">
+                <img src="kozak.jpg" alt="Грушевський" class="participant-img" onerror="this.style.display='none'">
+                <div>
+                    <div class="participant-name">Михайло Грушевський</div>
+                    <div class="participant-role">Голова УЦР, історик</div>
+                </div>
+            </div>
+            <div class="participant">
+                <img src="kozak.jpg" alt="Винниченко" class="participant-img" onerror="this.style.display='none'">
+                <div>
+                    <div class="participant-name">Володимир Винниченко</div>
+                    <div class="participant-role">Голова Генерального Секретаріату. Голова Генерального Секретаріату Голова Генерального Секретаріату</div>
+                </div>
+            </div>
+            <div class="participant">
+                <div class="participant-avatar">ВД</div>
+                <div>
+                    <div class="participant-name">Ви</div>
+                    <div class="participant-role">Радник Володимира Винниченка</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="context-block">
+            Київ, весна 1917 року. Російська імперія впала. У Києві створено Українську Центральну Раду (УЦР) на чолі з Михайлом Грушевським.
+        </div>
+
+        <div id="learning-content"></div>
+    </div>
+</div>
+
+<!-- SIMULATION PAGE -->
+<div id="simulation-page" class="page">
+    <header>
+        <h1 class="logo">CHRONOS</h1>
+        <div class="user-badge" id="user-badge-simulation"></div>
+    </header>
+
+    <h2 class="page-title">Режим симуляції</h2>
+    <p class="page-subtitle" style="text-align:center; margin-top:20px;">Цей режим перебуває у розробці 🔧</p>
+
+    <button class="btn-yellow" style="display:block; width: 50%; margin:20px auto;" onclick="openTopics()">Назад до тем</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
