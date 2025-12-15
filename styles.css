@@ -500,6 +500,9 @@ header {
     cursor: pointer;
     font-size: 14px;
     transition: all 0.2s;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .tab-btn:hover {
